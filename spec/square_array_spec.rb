@@ -9,7 +9,7 @@ describe '#square_array' do
   end
 
   it 'calls on each' do
-    numbers = [1,2,3].each do |n|
+    numbers = [1,2,3].each { |number| print number +"\n" }
     expect(numbers).to receive(:each)
     square_array(numbers)
   end
